@@ -37,13 +37,16 @@ export async function getPosts (params: any) {
     matchObj.alias = alias;
   }
   if (title) {
-    matchObj.title = { $regex: title, $options: 'gi' };
+    matchObj.title = { $regex: title, $options: 'i' };
+    // matchObj.title = { $regex: title, $options: 'gi' };
   }
   if (content) {
-    matchObj.content = { $regex: content, $options: 'gi' };
+    // matchObj.content = { $regex: content, $options: 'gi' };
+    matchObj.content = { $regex: content, $options: 'i' };
   }
   if (label) {
-    matchObj.labels = { $regex: label, $options: 'gi' };
+    matchObj.labels = { $regex: label, $options: 'i' };
+    // matchObj.labels = { $regex: label, $options: 'gi' };
   }
   if (
     Array.isArray(createTime) &&
@@ -313,10 +316,10 @@ export async function getComments (params) {
   const matchObj: any = {};
   const { username, content, createTime, alias } = params;
   if (username) {
-    matchObj.username = { $regex: username, $options: 'gi' };
+    matchObj.username = { $regex: username, $options: 'i' };
   }
   if (content) {
-    matchObj.content = { $regex: content, $options: 'gi' };
+    matchObj.content = { $regex: content, $options: 'i' };
   }
   if (
     Array.isArray(createTime) &&
@@ -414,10 +417,10 @@ export async function getGuestbook (params) {
   options.sort = `${params.order === 'descend' ? '-' : ''}${params.sortBy}`;
   const query: any = {};
   if (params.username) {
-    query.username = { $regex: params.username, $options: 'gi' };
+    query.username = { $regex: params.username, $options: 'i' };
   }
   if (params.content) {
-    query.content = { $regex: params.content, $options: 'gi' };
+    query.content = { $regex: params.content, $options: 'i' };
   }
   if (
     Array.isArray(params.createTime) &&

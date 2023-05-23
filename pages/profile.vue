@@ -125,9 +125,10 @@ export default Vue.extend({
 }
 
 .profile-wrap {
-  background-image: linear-gradient(-90deg,#00BCD4 0,#1890ff 100%);
+  background: #fff;
+  /* background-image: linear-gradient(-90deg,#00BCD4 0,#1890ff 100%); */
   border-radius: 10px;
-  max-width: 680px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   padding: 30px;
@@ -149,7 +150,7 @@ export default Vue.extend({
 }
 
 .main-wrap {
-  color: #fff;
+  /* color: #fff; */
   padding-top: 55px;
 }
 

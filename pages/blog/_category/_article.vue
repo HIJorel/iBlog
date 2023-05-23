@@ -14,9 +14,9 @@
           <p>
             <span>版权声明：本博客所有文章除声明转载外，均采用</span>
             <a
-              href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh"
+              href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
               target="_blank"
-            >BY-NC-SA 3.0</a>
+            >BY-NC-SA 4.0</a>
             <span>许可协议。转载请注明来自</span>
             <a :href="website">{{ settings.blogName }}</a>。
           </p>
@@ -267,7 +267,7 @@ export default Vue.extend({
 
 .left-wrap {
   position: relative;
-  max-width: 792px;
+  max-width: 1200px;
 }
 
 .content-wrap {

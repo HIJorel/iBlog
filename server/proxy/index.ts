@@ -29,10 +29,10 @@ export async function getPosts (params) {
   if (keyword) {
     switch (params.filterType) {
       case 'title':
-        conditions.title = { $regex: keyword, $options: 'gi' };
+        conditions.title = { $regex: keyword, $options: 'i' };
         break;
       case 'tag':
-        conditions.labels = { $regex: keyword, $options: 'gi' };
+        conditions.labels = { $regex: keyword, $options: 'i' };
         break;
       case 'date':
         if (
@@ -51,19 +51,19 @@ export async function getPosts (params) {
           {
             title: {
               $regex: keyword,
-              $options: 'gi'
+              $options: 'i'
             }
           },
           {
             labels: {
               $regex: keyword,
-              $options: 'gi'
+              $options: 'i'
             }
           },
           {
             content: {
               $regex: keyword,
-              $options: 'gi'
+              $options: 'i'
             }
           }
         ];

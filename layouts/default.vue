@@ -28,7 +28,7 @@
               @click="hideMenu"
             >
               <nuxt-link to="/">
-                <font-awesome-icon :icon="['fas', 'pen-nib']" />博客
+                <font-awesome-icon :icon="['fas', 'pen-nib']" />博文
               </nuxt-link>
               <div class="nav-line" />
             </li>
@@ -56,7 +56,7 @@
         </div>
       </div>
       <nuxt />
-      <layout-footer :show-login="true" />
+      <layout-footer :show-login="false" />
       <div class="fixed-tools">
         <div :class="{ 'show-to-top': showToTop }" class="to-top" @click="toTop">
           <web-font icon="arrow-to-top" />
